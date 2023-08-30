@@ -1,6 +1,6 @@
 import { usePlatforms } from "./usePlatforms";
 
-export const usePlatform = (id:number) => {
+export const usePlatform = (id:number|undefined) => {
 
   const { data } = usePlatforms();
 

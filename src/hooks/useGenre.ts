@@ -1,6 +1,6 @@
 import { useGenres } from "./useGenres";
 
-export const useGenre = (id:number) => {
+export const useGenre = (id:number|undefined) => {
 
   const { data } = useGenres();
 
