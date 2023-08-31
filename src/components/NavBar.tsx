@@ -4,18 +4,12 @@ import React from "react";
 import ColourModeSwitch from "./ColourModeSwitch";
 import SearchInput from "./SearchInput";
 
-interface Props {
-  onSearch: (searchText: string) => void;
-}
-
-const NavBar = ({ onSearch }: Props) => (
-  <div>
-    <HStack padding="10px">
-      <Image src={logo} boxSize="60px"></Image>
-      <SearchInput onSearch={onSearch} />
-      <ColourModeSwitch />
-    </HStack>
-  </div>
+const NavBar = () => (
+  <HStack padding="10px">
+    <Image src={logo} boxSize="60px"></Image>
+    <SearchInput />
+    <ColourModeSwitch />
+  </HStack>
 );
 
 export default NavBar;
