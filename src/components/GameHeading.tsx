@@ -4,7 +4,7 @@ import { usePlatforms } from "../hooks/usePlatforms";
 import { useGenres } from "../hooks/useGenres";
 import { usePlatform } from "../hooks/usePlatform";
 import { useGenre } from "../hooks/useGenre";
-import useGameQueryStore from "../hooks/useGameQueryStore";
+import useGameQueryStore from "../stores/useGameQueryStore";
 
 const GameHeading = () => {
   const { gameQuery } = useGameQueryStore();

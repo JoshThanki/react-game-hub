@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { BsSearch } from "react-icons/bs";
-import useGameQueryStore from "../hooks/useGameQueryStore";
+import useGameQueryStore from "../stores/useGameQueryStore";
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);

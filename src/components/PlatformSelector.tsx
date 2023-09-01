@@ -10,7 +10,7 @@ import {
 import { BsChevronDown } from "react-icons/bs";
 import { usePlatforms } from "../hooks/usePlatforms";
 import { usePlatform } from "../hooks/usePlatform";
-import useGameQueryStore from "../hooks/useGameQueryStore";
+import useGameQueryStore from "../stores/useGameQueryStore";
 
 const PlatformSelector = () => {
   const { gameQuery, setPlatformId } = useGameQueryStore();
