@@ -3,7 +3,7 @@ import App from "./App";
 import Layout from "./pages/Layout";
 import GamesDetail from "./pages/GamesDetail";
 import HomePage from "./pages/HomePage";
-import ErrorPage from "./components/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "", element: <HomePage /> },
-      { path: "games/:id", element: <GamesDetail /> },
+      { path: "games/:slug", element: <GamesDetail /> },
     ],
   },
 ]);
