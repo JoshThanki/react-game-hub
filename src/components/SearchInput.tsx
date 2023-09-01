@@ -13,11 +13,13 @@ const SearchInput = () => {
   const setSearchText = useGameQueryStore((s) => s.setSearchText);
 
   return (
-    <FormControl
+    <form
       onSubmit={(event) => {
         event.preventDefault();
         setSearchText(ref.current?.value || "");
+        ref.current ? (ref.current.value = "") : "";
       }}
+      style={{ width: "100%" }}
     >
       <InputGroup>
         <InputLeftElement>
@@ -30,7 +32,7 @@ const SearchInput = () => {
           variant="filled"
         />
       </InputGroup>
-    </FormControl>
+    </form>
   );
 };
 
