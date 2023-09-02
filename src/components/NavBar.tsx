@@ -4,16 +4,25 @@ import React from "react";
 import ColourModeSwitch from "./ColourModeSwitch";
 import SearchInput from "./SearchInput";
 import { Link } from "react-router-dom";
+import useGameQueryStore from "../stores/useGameQueryStore";
 
-const NavBar = () => (
-  <HStack padding="10px">
-    <Link to="/">
-      <Image src={logo} style={{ maxWidth: "60px", maxHeight: "60px" }} />
-    </Link>
+const NavBar = () => {
+  const setSearchText = useGameQueryStore((s) => s.setSearchText);
 
-    <SearchInput />
-    <ColourModeSwitch />
-  </HStack>
-);
+  return (
+    <HStack padding="10px">
+      <Link to="/">
+        <Image
+          src={logo}
+          style={{ maxWidth: "60px", maxHeight: "60px" }}
+          onClick={() => setSearchText("")}
+        />
+      </Link>
+
+      <SearchInput />
+      <ColourModeSwitch />
+    </HStack>
+  );
+};
 
 export default NavBar;

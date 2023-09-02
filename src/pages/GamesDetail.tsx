@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
 import {
   Grid,
+  GridItem,
   HStack,
   Heading,
   SimpleGrid,
@@ -30,14 +31,18 @@ const GamesDetail = () => {
   }
 
   return (
-    <>
-      <Heading> {game.name} </Heading>
+    <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={5}>
+      <GridItem>
+        <Heading> {game.name} </Heading>
+        <ExpandableText>{game.description_raw}</ExpandableText>
+        <GameAttributes game={game} />
+      </GridItem>
 
-      <ExpandableText>{game.description_raw}</ExpandableText>
-      <GameAttributes game={game} />
-      <GameTrailer gameId={game.id} />
-      <Screenshots gameId={game.id} />
-    </>
+      <GridItem>
+        <GameTrailer gameId={game.id} />
+        <Screenshots gameId={game.id} />
+      </GridItem>
+    </SimpleGrid>
   );
 };
 
