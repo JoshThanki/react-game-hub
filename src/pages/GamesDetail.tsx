@@ -14,6 +14,8 @@ import DefinitionItem from "../components/DefinitionItem";
 import { useGenres } from "../hooks/useGenres";
 import CriticScore from "../components/CriticScore";
 import GameAttributes from "../components/GameAttributes";
+import GameTrailer from "../components/GameTrailer";
+import Screenshots from "../components/Screenshots";
 
 const GamesDetail = () => {
   const { slug } = useParams();
@@ -33,6 +35,8 @@ const GamesDetail = () => {
 
       <ExpandableText>{game.description_raw}</ExpandableText>
       <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
+      <Screenshots gameId={game.id} />
     </>
   );
 };
