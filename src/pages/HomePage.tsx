@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -15,6 +15,10 @@ import GenreList from "../components/GenreList";
 import PlatformSelector from "../components/PlatformSelector";
 
 function App() {
+  useEffect(() => {
+    document.title = "Games";
+  }, []);
+
   return (
     <Grid
       templateAreas={{

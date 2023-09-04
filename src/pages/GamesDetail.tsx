@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
 import {
@@ -21,6 +21,10 @@ import Screenshots from "../components/Screenshots";
 const GamesDetail = () => {
   const { slug } = useParams();
   const { data: game, isLoading, error } = useGame(slug!);
+
+  useEffect(() => {
+    document.title = game?.name || "Details";
+  }, [game]);
 
   if (isLoading) {
     return <Spinner />;
