@@ -12,7 +12,7 @@ const GameTrailer = ({ gameId }: Props) => {
   const { data: trailers, isLoading, error } = useTrailers(gameId);
 
   const firstTrailer = trailers?.results[0];
-  console.log(trailers?.results);
+
 
   if (isLoading) {
     return <Spinner />;

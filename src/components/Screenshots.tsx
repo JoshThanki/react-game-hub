@@ -9,7 +9,7 @@ interface Props {
 const Screenshots = ({ gameId }: Props) => {
   const { data: screenshots, error, isLoading } = useScreenshots(gameId);
 
-  console.log(screenshots);
+
   if (isLoading) {
     return <Spinner />;
   }

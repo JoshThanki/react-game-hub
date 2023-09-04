@@ -18,7 +18,7 @@ const GenreList = () => {
   const { data, isLoading, error } = useGenres();
   const { gameQuery, setGenreId } = useGameQueryStore();
 
-  console.log(data);
+
 
   return (
     <>
